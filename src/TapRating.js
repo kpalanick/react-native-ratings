@@ -31,7 +31,7 @@ export default class TapRating extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.defaultRating !== this.props.defaultRating) {
+    if (nextProps.defaultRating !== this.props.defaultRating || nextProps.defaultRating !== this.state.position) {
       this.setState({ position: nextProps.defaultRating })
     }
   }
